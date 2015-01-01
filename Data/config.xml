@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-  <poligon data="" height="480" type="3D" width="640">
+  <poligon type="3D" width="640" height="480" data="">
   </poligon>
   <palette resetkey="1">
-    <color blue="0" green="0" key="2" red="255"/>
-    <color blue="0" green="255" key="3" red="0"/>
-    <color blue="255" green="0" key="4" red="0"/>
-    <color blue="0" green="255" key="5" red="255"/>
-    <color blue="255" green="0" key="6" red="255"/>
-    <color blue="255" green="255" key="7" red="0"/>
+    <color key="2" red="255" green="0" blue="0"/>
+    <color key="3" red="0" green="255" blue="0"/>
+    <color key="4" red="0" green="0" blue="255"/>
+    <color key="5" red="255" green="255" blue="0"/>
+    <color key="6" red="255" green="0"blue="255"/>
+    <color key="7" red="0" green="255"blue="255"/>
   </palette>
   <pool resetkey="z">
-    <movie filename="looping_static_1.mp4" key="x"/>
-    <movie filename="video.mov" key="c"/>
+    <movie filename="video_1.mp4" key="x"/>
+    <movie filename="video_2.mov" key="c"/>
   </pool>
 </configuration>
