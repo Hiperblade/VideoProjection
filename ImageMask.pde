@@ -7,20 +7,20 @@ public interface IImageMaskSource
 public class ImageMask {
   private IImageMaskSource image;
   private IImageMaskSource mask;
-  private float threshold;
+  private float thresholdMask;
   
   public ImageMask(IImageMaskSource image, IImageMaskSource mask){
     this(image, mask, 1);
   }
   
-  public ImageMask(IImageMaskSource image, IImageMaskSource mask, float threshold){
+  public ImageMask(IImageMaskSource image, IImageMaskSource mask, float thresholdMask){
     this.image = image;
     this.mask = mask;
-    this.threshold = threshold;
+    this.thresholdMask = thresholdMask;
   }
   
   protected PImage cropImage(PImage baseImage, PImage maskImage){
-    maskImage.filter(THRESHOLD, threshold);
+    maskImage.filter(THRESHOLD, thresholdMask);
     baseImage.resize(maskImage.width, maskImage.height);
     baseImage.mask(maskImage);
     return baseImage;
@@ -32,6 +32,10 @@ public class ImageMask {
       tmp = cropImage(image.getImage(), mask.getImage());
     }
     return tmp;
+  }
+  
+  public void setThresholdMask(float value) {
+    thresholdMask = value;
   }
 }
 
